@@ -35,6 +35,30 @@ Core Java | Object-Oriented Programming | Console-Based Application
 
 ---
 
+## Architecture
+
+The application follows a modular structure separating different responsibilities into packages.
+
+```
+User Interaction (Console)
+        ↓
+Bank System Controller
+        ↓
+Account Management
+        ↓
+Transaction Processing
+        ↓
+Reports & Notifications
+```
+
+The system is organized into three main modules:
+
+- **account package** → Account types and account operations  
+- **bank package** → System entry point, authentication, employee management  
+- **transaction package** → Transaction handling, reports, and notifications
+
+---
+
 ## Concepts Demonstrated
 
 - Object-Oriented Programming (OOP)
@@ -87,20 +111,44 @@ BankManagementSystem
 1. Clone the repository
 
 ```
-git clone https://github.com/your-username/bank-management-system.git
+git clone https://github.com/BharkarHariprasad/java-bank-management-system.git
 ```
 
-2. Open the project in Eclipse IDE or any Java IDE.
+2. Open the project in **Eclipse IDE** or any Java IDE.
 
 3. Navigate to the main class:
 
 ```
-HomePage.java
+Login.java
 ```
 
-4. Run the program as a Java Application.
+4. Run the program as a **Java Application**.
 
-5. Follow the console menu instructions to perform banking operations.
+5. Login using one of the default credentials below.
+
+---
+
+## Default Login Credentials
+
+The system implements a simple **role-based authentication system**.
+
+| Role | Employee ID | Password | Access |
+|-----|-------------|----------|-------|
+| Manager | 201 | neha@123 | Full access to all banking operations |
+| Employee | 202 | ramesh@456 | Limited access to customer account operations |
+
+### Manager Permissions
+- View all accounts
+- Manage employees
+- Generate reports
+- Monitor transactions
+- Full administrative access
+
+### Employee Permissions
+- Create customer accounts
+- Deposit and withdraw funds
+- View account details
+- Process basic banking transactions
 
 ---
 
